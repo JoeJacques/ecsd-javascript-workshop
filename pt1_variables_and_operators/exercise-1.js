@@ -6,3 +6,6 @@ let c = {};
 let d = false;
 let e = Infinity;
 let f = undefined;
+
+console.log (`The types of the variables are: ${typeof(a)}, ${typeof(b)}, ${typeof(c)},
+${typeof(d)}, ${typeof(e)} and ${typeof(f)}`)
