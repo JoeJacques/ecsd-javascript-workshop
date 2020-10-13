@@ -5,3 +5,5 @@ b.property = 500;
 
 console.log("The value of property in a is " + a.property);
 console.log("The value of property in b is " + b.property);
+
+// I expect the value to be 500, 
