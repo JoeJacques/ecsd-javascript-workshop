@@ -1,0 +1,17 @@
+{
+  "name": "express_rest",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "alvaro.basallo@ecs-digital.co.uk",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon src"
+  }
+}
