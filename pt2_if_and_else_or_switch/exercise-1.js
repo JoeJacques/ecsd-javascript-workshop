@@ -1,11 +1,8 @@
 // Conditions
 
 let colour = "green";
-colour = 'red'
-colour = 'RED'
 
-
-if (colour === 'GREEN' || colour == 'green') { 
+if (colour === 'GREEN' || colour == 'green' || colour === 'orange' || colour ==='ORANGE') { 
     console.log('color is great'); 
 
 } else if (colour === 'red' || colour === 'RED') {
