@@ -1,0 +1,26 @@
+<!-- Buggy Exercise HTML -->
+<html>
+  <head>
+    <script src="./exercise-2.js"></script>
+  </head>
+  <body>
+    <script>
+      const map = Map(10);
+      map.generateMap(Tile);
+      const gui = GUI(map, "spawn-map", "2d", WaveSequence);
+      gui.drawMap();
+    </script>
+    <h1>
+      Spawn Wave!
+    </h1>
+    <p>
+      You should be able to click on a tile on the map and generate a sequence
+      of spawning black squares. Unfortunately, something appears to be amiss in
+      the code. Using debugging techniques, try figure out what the problems are
+      and resolve them.
+    </p>
+    <canvas id="spawn-map" width="400" height="400" style="border:1px solid #000000;">
+      Your browser requires HTML 5 to render the canvas!
+    </canvas>
+  </body>
+</html>
