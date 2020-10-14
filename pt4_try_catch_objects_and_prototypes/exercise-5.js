@@ -1,21 +1,31 @@
 function Factory(blueprint) {
-  // Code here...
-}
+this.blueprint = ._bluepromt
 
-function Car() {
+  }
+
+
+}
+// Don't understand this concept 
+
+
+
+function Car()  {
   this.drive = () => {
+    super('Car')
     console.log("The car drove.");
   }
 }
 
 function Ship() {
   this.sail = () => {
+    super('Ship')
     console.log("The boat sailed.");
   }
 }
 
 function Plane() {
   this.fly = () => {
+    super('Ship')
     console.log("The plane flew.");
   }
 }
