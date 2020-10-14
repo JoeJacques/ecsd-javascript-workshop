@@ -33,12 +33,33 @@ function Shop(name, location, currency, inventory) {
   this.currency = currency;
   this.inventory = inventory;
 
-  this.isAvailable = (index) => {
-    // Code here...
+// Methods 
+
+  this.isAvailable = (index ) => this.inventory[index].available
+  this.addItem = (name=null,price=0.00,available=false) => {
+  this.inventory.push({name: this.name, price: this.price, available: this.available})
   }
+  this.search = (query) => { 
+    for (let i=0; i < this.inventory.length; i++) {
+      if (this.inventory[i].name.includes(query)) {
+        console.log(this.inventory[i].name)
+      }else {
+        continue 
+      }
+      }
+    }
+    this.listAvailableInventory = () => { 
+      for (let i=0; i < this.inventory.length; i++) {
+        if (this.inventory[i].available === true) {
+          console.log(this.inventory[i].name + ' ' + this.inventory[i].price)
+        } else {
+          continue;
+    }
+  }
+}
+}
 
   // Code here...
-}
 
 const shop = new Shop("Happy Goods", "London - Old Street", "Sterling (£)", inventory);
 
