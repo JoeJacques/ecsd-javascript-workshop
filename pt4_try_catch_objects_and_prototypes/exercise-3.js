@@ -77,9 +77,15 @@ search("a");
 // e) List All
 
 const listAvailableInventory = () => {
-  // Code here...
+  for (let i=0; i < shop.inventory.length; i++) {
+    if (shop.inventory[i].available === true) {
+      console.log(shop.inventory[i].name + ' ' + shop.inventory[i].price)
+    } else {
+      continue;
+    }
+  }
 }
 
 // Uncomment line below to test
-// listAvailableInventory();
+listAvailableInventory();
 
