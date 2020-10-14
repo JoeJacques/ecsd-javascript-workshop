@@ -40,11 +40,12 @@ console.log(shop.inventory[3].price)
 // b) Dynamic Reading
 
 const isAvailable = (inventoryIndex) => {
-  // Code here...
+    return shop.inventory[inventoryIndex].available
+
 }
 
 // Uncomment line below to test
-// console.log("Cherry Sundae available? ==> " + isAvailable(2));
+console.log("Cherry Sundae available? ==> " + isAvailable(2));
 
 // c) Adding Dynamic Entry
 
