@@ -62,11 +62,17 @@ console.log("Is the new item available? ==> " + isAvailable(5))
 // d) Dynamic Reading +
 
 const search = (query) => {
-  // Code here...
+  for (let i=0; i < shop.inventory.length; i++) {
+    if (shop.inventory[i].name.includes(query)) {
+      console.log(shop.inventory[i].name)
+    } else {
+      continue;
+    }
+  }
 }
 
 // Uncomment line below to test
-// search("h");
+search("a");
 
 // e) List All
 
@@ -76,3 +82,4 @@ const listAvailableInventory = () => {
 
 // Uncomment line below to test
 // listAvailableInventory();
+
