@@ -35,7 +35,7 @@ const shop = {
 
 // a) Cost of Sharp Soda?
 
-// Answer here...
+console.log(shop.inventory[3].price)
 
 // b) Dynamic Reading
 
