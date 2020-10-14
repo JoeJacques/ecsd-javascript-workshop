@@ -5,6 +5,12 @@
 
 // Write your function here...
 
+buildMap = (num) => { 
+    const square_array = new Array(num)
+    square_array.forEach(Element => square_array.push(num)) 
+    console.log(square_array)
+}
+
 let squareMap = buildMap(5);
 
 console.log(squareMap);
