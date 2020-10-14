@@ -1,25 +1,43 @@
 // Switch
 
-let animal = "DOG"
+let animal = 'DOG'
 
-if (animal.toLowerCase() === "dog") {
+// if (animal.toLowerCase() === "dog") {
 
-  console.log("WOOF!");
+//   console.log("WOOF!");
 
-} else if (animal.toLowerCase() === "snake") {
+// } else if (animal.toLowerCase() === "snake") {
 
-  console.log("HISSSS");
+//   console.log("HISSSS");
 
-} else if (animal.toLowerCase() === "cat") {
+// } else if (animal.toLowerCase() === "cat") {
 
-  console.log("MEOW");
+//   console.log("MEOW");
 
-} else if (animal.toLowerCase() === "cow") {
+// } else if (animal.toLowerCase() === "cow") {
 
-  console.log("MOO");
+//   console.log("MOO");
 
-} else {
+// } else {
 
-  console.log("Unrecognizable animal :(");
+//   console.log("Unrecognizable animal :(");
+
+// }
+
+
+switch(animal.toLowerCase()) {
+  case 'dog':
+    console.log('WOOF') 
+    break;
+  case 'snake':
+    console.log('HISSS');
+    break;
+  case 'cat':
+    console.log('MEOW');
+    break; 
+default: 
+  console.log('aninal not found')
+    
+
 
 }
