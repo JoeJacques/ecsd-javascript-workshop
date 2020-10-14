@@ -2,16 +2,18 @@
 
 // a)
 
-const f1 = () => {
-  let counter = 0;
+
+  const f1 = () => {
+  try { 
   while (counter < 10) {
     console.log("Counter number is: " + counter);
     counter++;
-  }
+  } 
+  } catch (error) {console.error(console.error())}
 }
 
-// Uncomment the line below to test
-// f1();
+f1();
+
 
 // b)
 
