@@ -8,5 +8,11 @@ console.log("Standard array: " + array);
 
 // Your function...
 
-// let shuffledArray = shuffle(array);
+
+shuffle = (array) => { 
+  array.sort(() => Math.random() - 0.5)
+  return array
+}
+
+let shuffledArray = shuffle(array);
 console.log("Shuffled array: " + shuffledArray);
