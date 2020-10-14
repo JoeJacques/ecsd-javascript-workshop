@@ -49,10 +49,15 @@ console.log("Cherry Sundae available? ==> " + isAvailable(2));
 
 // c) Adding Dynamic Entry
 
-// Code here...
+const new_item = (name=null,price=0.00,available=false) => {
+  shop.inventory.push({name: name, price: price, available: available})
+  console.log(shop.inventory[shop.inventory.length -1])
+}
+
+  new_item('coke', 2.99, true)
 
 // Uncomment and replace argument with one which specifies to your item if necessary
-// console.log("Is the new item available? ==> " + isAvailable(5))
+console.log("Is the new item available? ==> " + isAvailable(5))
 
 // d) Dynamic Reading +
 
