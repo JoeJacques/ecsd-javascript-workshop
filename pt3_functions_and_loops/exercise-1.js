@@ -15,14 +15,22 @@ f1(array);
 console.log("After f1 was called: " + array);
 console.log("\n");
 
-// // b) while
+// b) while
 
-// let array2 = [8, 2, 6, 20, 13];
-// console.log("b) Before function was called: " + array2);
+f2 = (array) => { 
+    let i =0;
+    while (i < array.length) {
+        --array[i]
+        i++
+    }
+}
 
-// // f2(array2);
-// // console.log("After f2 was called: " + array2);
-// console.log("\n");
+let array2 = [8, 2, 6, 20, 13];
+console.log("b) Before function was called: " + array2);
+
+f2(array2);
+console.log("After f2 was called: " + array2);
+console.log("\n");
 
 // // c) forEach
 
