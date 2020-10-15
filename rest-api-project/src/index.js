@@ -1,40 +1,29 @@
-const express = require('express'); 
-const cors = require('cors');
-const helemet = require('helemt');
-const morgan = require('morgan');
+import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 
 const PORT = 3000;
 const app = express()
 
-// Temp data store 
+app.use(bodyParser.json());
+app.use(cors());
 
-const cars = [ 
-    {   id: int,
-        make: string,
-        model: string,
-        color: string,
-        year: int
-    }
-]
-
-
-
-app.get('/cars', (req, res) => { 
-    return res.send('HTTP GET METHOD');
+app.get('/', (req, res) => { 
+    res.send( 'hello world');
 });
 
-app.post('/cars:id', (req, res) => {
-    return res.send('POST METHOD');
-});
+// app.put('/', async (req, res) =>  { 
+//     res.send(await 'test')
+// })
 
-app.put('cars/:id', (req, res) => { 
-    return res.send( req.params.id, 'PUT REQUEST');
-})
+// app.post('/', async (req, res) => {
+//     res.send(await 'TEST')
+// })
 
-app.delete('cars/:id', (req, res) => {
-    res.send(req.params.id, 'DELETE METHOD')
-})
+// app.delete('/', async (req, res) => { 
+//     res.send(await 'TEST');
+// })
 
-app.listen(PORT, () =>  {
-    console.log(`APP is running on port ${PORT}`)
+app.listen(PORT,() =>  {
+    console.log(`API is running on port ${PORT}`)
 })
