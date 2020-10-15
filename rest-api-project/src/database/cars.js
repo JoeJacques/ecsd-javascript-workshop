@@ -5,8 +5,8 @@ const data = 'cars';
 
 insertCar = async (car) => { 
     const datastore = await getDB(); 
-    const { c} = await datastore.data(dataName).insertOne(car)
-    return id
+    const {InsertedCar} = await datastore.data(dataName).insertOne(car)
+    return InsertedCar
 } 
 
 getCar = async () => { 
