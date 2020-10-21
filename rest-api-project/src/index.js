@@ -3,13 +3,12 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 // const carRouter = require('./routes/cars-routes'); 
 const mongoose = require('mongoose')
-const dbConfig = require('../src/data/database.config')
+const dbConfig = require('../src/data/database.config.js')
 
 const PORT = 3000;
 const app = express()
 mongoose.Promise = global.Promise;
 
-// app.use('/cars', carRouter)
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json());
 app.use(cors());
@@ -25,23 +24,7 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 });
 
-app.get('/', (req, res) => { 
-    res.json( {'id': 1, 'make': 'ford', 'model': 'GT 500', 'year': 2001, 'color': 'red'});
-})
-
-// app.put('/', (req, res) => { 
-//     res.send('PUT TEST')
-// })
-
-// app.post('/', (req, res) => {
-//     res.send('POST ROUTE')
-
-// })
-
-// app.delete('/', (req, res) => { 
-//     res.send('DELETE TEST')
-// })
-
+require('../src/routes/cars-routes.js') (app)
 
 app.listen(PORT,() =>  {
     console.log(`API is running on port ${PORT}`)
