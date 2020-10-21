@@ -1,16 +1,16 @@
 // Narrow down the scope to where it is necessary
 
 f1 = () => {
-  var1 = 0; // CHANGE var1
   const arr = ["a", "b", "c", "d"];
 
   // CHANGE var2
   for (var2 of arr) {
+    var1 = 0
     var1++;
   }
 
   try {
-    var3 = 0; // CHANGE var3
+var3 = 0; // CHANGE var3
     throw new Error();
   } catch (e) {
     // TESTING CODE
