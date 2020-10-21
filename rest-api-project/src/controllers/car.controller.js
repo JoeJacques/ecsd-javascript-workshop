@@ -8,7 +8,7 @@ exports.create = (req, res) => {
         })
     }
 const car = new Car({
-    id: uuid(),
+    id: req.body.id,
     make: req.body.make,
     model: req.body.model,
     year: req.body.year,
@@ -95,7 +95,7 @@ exports.update = (req, res) => {
 };
 
 exports.delete = (req, res) => {
-    Note.findByIdAndRemove(req.params.id)
+    Car.findByIdAndRemove(req.params.id)
     .then(car => {
         if(!car) {
             return res.status(404).send({
